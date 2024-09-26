@@ -155,6 +155,7 @@ function addItemForm() {
 function addNewChemical(newChemical) {
   
   chemicals.push(newChemical);
+  updateEmptyMessage();
   appendChemicalToTable(newChemical,chemicals.length - 1);
 }
 
@@ -199,13 +200,19 @@ function deleteSelectedChemicals() {
     tableBody.deleteRow(index); 
   });
   rebuildTable();
+  updateEmptyMessage();
 }
 
 // Rebuild the table to ensure the IDs and checkboxes remain accurate
 
 function rebuildTable() {
   const tableBody = document.querySelector("#tableData");
-  tableBody.innerHTML = ""; 
+  tableBody.innerHTML = `
+        <tr id="emptyMessageRow" style="display: none;">
+            <td colspan="10" style="text-align: center; color: #888;">
+                Add chemicals data to see them listed here.
+            </td>
+        </tr>`; 
 
   chemicals.forEach((chemical, index) => {
     appendChemicalToTable(chemical, index);
@@ -256,3 +263,13 @@ function sortChemicalsByName(isAscending) {
 document.querySelector("#refreshAll").addEventListener("click", function () {
   location.reload();
 })
+
+// empty message
+
+function updateEmptyMessage() {
+  const emptyMessageRow = document.getElementById('emptyMessageRow');
+
+  if (emptyMessageRow) {
+      emptyMessageRow.style.display = chemicals.length === 0 ? 'table-row' : 'none'; 
+  }
+}

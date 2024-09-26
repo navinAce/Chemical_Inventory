@@ -23,7 +23,6 @@ h1{
 
 .table-wrapper{
     margin: 10px 70px 70px;
-    
 }
 
 .fl-table {
@@ -68,6 +67,7 @@ h1{
     .fl-table {
         display: block;
         width: 100%;
+        min-height: 600px;
     }
     h1{
         font-size: 23px;
@@ -212,4 +212,16 @@ th:nth-child(3)::after {
 th:nth-child(3):hover::after {
     opacity: 1; 
 }
+
+/*                   Styles for the empty message row                               */
+#emptyMessageRow {
+    display: none; 
+    background-color: #f9f9f9; 
+    color: #888; 
+    font-size: 16px; 
+    text-align: center; 
+    height: 50px; 
+}
+
+
 
