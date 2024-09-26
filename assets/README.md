@@ -25,13 +25,7 @@ The application uses a JSON array to store information about chemicals. Each ent
 - `Quantity`
 
 ## Design
-Chemical Inventory Management System Design 1
-
-![Chemical Inventory Management System Design](assets/img1.jpeg)
-
-Chemical Inventory Management System Design 2
-
-![Chemical Inventory Management System Design](assets/img2.jpeg)
+![Chemical Inventory Management System Design](https://github.com/username/repository/raw/main/images/design-screenshot.png)
 
 
 ## Setup Instructions
