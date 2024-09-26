@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="table-wrapper">
+            <div class="flexContainer">
+                <h1>Chemical Supplies</h1>
+
+                <span id="addItem" class="material-symbols-outlined" style="color: #F0EAD6; margin-right:10px;" onclick="addItemForm()">
+                    add
+                </span>
+                <span id="deleteButton" class="material-symbols-outlined" style="color: #ff0202;margin-right:10px;">
+                    delete
+                </span>
+                <span id="refreshAll" class="material-symbols-outlined" style="color: #0000ff;">
+                    refresh
+                    </span>
+            </div>
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" onclick="toggleSelectAll()"></th>
+                        <th>Id </th>
+                        <th>Chemical name</th>
+                        <th>Vender</th>
+                        <th>Density (g/m²)</th>
+                        <th>Viscosity (m²/s)</th>
+                        <th>Packaging</th>
+                        <th>Pack size</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                <tbody>
+            </table>
+
+            <!-- Add new chemical form -->
+
+            <form id="addNewChemicalForm" style="display: none;">
+                <label for="name">Chemical Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="vendor">Vendor:</label>
+                <input type="text" id="vendor" name="vendor" required><br>
+                <label for="density">Density (g/m²):</label>
+                <input type="number" id="density" name="density" step="any" required><br>
+                <label for="viscosity">Viscosity (m²/s):</label>
+                <input type="number" id="viscosity" name="viscosity" step="any" required><br>
+                <label for="packaging">Packaging:</label>
+                <input type="text" id="packaging" name="packaging" required><br>
+                <label for="packSize">Pack Size:</label>
+                <input type="number" id="packSize" name="packSize" step="any" required><br>
+                <label for="unit">Unit:</label>
+                <input type="text" id="unit" name="unit" required><br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" step="any" required><br>
+                <button type="submit">Add New</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
