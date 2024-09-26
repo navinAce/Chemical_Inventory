@@ -29,11 +29,13 @@ The application uses a JSON array to store information about chemicals. Each ent
    ```bash
    git clone https://github.com/navinAce/Chemical_Inventory.git
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
 ## Contact
 For any inquiries, please reach out:
 - **Portfolio**: [My Portfolio](https://navinworks.netlify.app)
 - **Email**: navinraj99305@gmail.com
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+
 
